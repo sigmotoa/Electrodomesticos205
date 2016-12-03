@@ -33,9 +33,14 @@ public class Grabadora extends Electrodomestico
     
     @Override
     void enceder() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (encendido != true) {
+            encendido = true;
+        } else {
+            encendido = false;
+        }
     }
 
     
+      
        
 }
