@@ -44,10 +44,27 @@ public class Televisor extends Electrodomestico {
         }
     }
 
-    public void bajarVolumen() {
+    public void bajarVolumen() 
+    {
+        if(volumen==0)
+        {
+            volumen=0;}
+        else{
+        volumen--;
+        }
+        
     }
 
-    public void subirCanal() {
+    public void subirCanal() 
+    {   if(numerocanal==120)
+    {
+        numerocanal=2;
+    }
+    else{
+        numerocanal++;
+    }
+        
+        
     }
 
     public void bajarCanal() 
