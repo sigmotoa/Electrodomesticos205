@@ -109,22 +109,33 @@ public class Grabadora extends Electrodomestico
             frecuencia--;
         }
         
+    }
         
+    public void cambiarFrecuencia(int siguienteFrecuencia) 
+    {
+        if (siguienteFrecuencia<88) {
+            frecuencia=frecuencia;
+        }
         
+        else   {
+            
+        if (siguienteFrecuencia>170) {
+            frecuencia=frecuencia;
+        }
         
+        else{
+        frecuencia= (double) siguienteFrecuencia;
+        }
         
-        
-        
-        
-        
+        }
+   
     } 
      
-     
-     
-     
-     
-     
-     
-     
-     
 }
+     
+     
+     
+     
+     
+     
+ 
