@@ -134,6 +134,7 @@ public class Televisor extends Electrodomestico {
         super(marca, entradaelectrica);
         this.alto = alto;
         this.ancho = ancho;
+       // System.out.println("Punse 1 para encender");
         calcularDiagonal();
     }
 
@@ -143,7 +144,7 @@ public class Televisor extends Electrodomestico {
                 + "Estado: " + encendido + "\n"
                 + "Vol: " + "" + volumen
                 + "\n" + "Can: " + numerocanal
-                + "\n------------------";
+                + "\n"+ mute;
     }
 
     public void mostrarMenu()
