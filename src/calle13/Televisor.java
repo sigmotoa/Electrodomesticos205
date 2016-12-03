@@ -21,7 +21,7 @@ public class Televisor extends Electrodomestico {
 
     boolean mute;
     boolean encendido = false;
-
+     byte voltemp;
     @Override
     void enceder() {
         if (encendido != true) {
@@ -33,7 +33,9 @@ public class Televisor extends Electrodomestico {
     }
 
     public void calcularDiagonal() {
-        diagonal = (byte) 47;//Es ejemplo..No sea perezoso, calcules
+               
+        diagonal=(int)Math.pow(((alto*alto)+(ancho*ancho)),0.5);
+        diagonal=(int)(diagonal/2.54); // diagonal = (byte) 47;//Es ejemplo..No sea perezoso, calcules
     }
 
     public void subirVol() {
@@ -57,10 +59,21 @@ public class Televisor extends Electrodomestico {
     }
 
     public void bajarVolumen() {
-        if (volumen == 0) {
-            volumen = 0;
-        } else {
-            volumen--;
+        if(mute==false)
+        {
+            if(volumen==0)
+               volumen=0;
+            else{
+                volumen--;}
+        }
+        else{
+            mute=false;
+      
+            if (voltemp == 0) {
+                volumen = 0;
+            } else {
+            volumen=voltemp--;
+            }
         }
 
     }
@@ -81,7 +94,7 @@ public class Televisor extends Electrodomestico {
             numerocanal--;
         }
     }
-    byte voltemp;
+   
 
     public void silenciar() {
 
