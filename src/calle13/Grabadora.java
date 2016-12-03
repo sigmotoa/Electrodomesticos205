@@ -11,6 +11,9 @@ package calle13;
  */
 public class Grabadora extends Electrodomestico
 {
+    
+    
+    
     boolean encendido;
     int volumen;
     int voltemp;
