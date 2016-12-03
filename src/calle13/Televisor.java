@@ -15,8 +15,8 @@ public class Televisor extends Electrodomestico {
     double ancho; //cm
     int diagonal; //inches
 
-    byte volumen=0;
-    byte numerocanal=2;//[];
+    byte volumen = 0;
+    byte numerocanal = 2;//[];
     //String nombrecanal[];
 
     boolean mute;
@@ -37,50 +37,67 @@ public class Televisor extends Electrodomestico {
     }
 
     public void subirVol() {
-        if (volumen == 100) {
-            volumen = 100;
-        } else {
-            volumen++;
+        if (mute == false) {
+            if (volumen == 100) {
+                volumen = 100;
+            } else {
+                volumen++;
+            }
         }
-    }
-
-    public void bajarVolumen() 
-    {
-        if(volumen==0)
-        {
-            volumen=0;}
         else{
-        volumen--;
+            mute=false;
+            if(voltemp==100)
+            {
+                volumen=100;
+            }
+            else{
+                volumen=(byte)voltemp++;
+            }
         }
-        
     }
 
-    public void subirCanal() 
-    {   if(numerocanal==120)
-    {
-        numerocanal=2;
-    }
-    else{
-        numerocanal++;
-    }
-        
-        
+    public void bajarVolumen() {
+        if (volumen == 0) {
+            volumen = 0;
+        } else {
+            volumen--;
+        }
+
     }
 
-    public void bajarCanal() 
-    {
-        if(numerocanal==2)
-            numerocanal=120;
-        else
+    public void subirCanal() {
+        if (numerocanal == 120) {
+            numerocanal = 2;
+        } else {
+            numerocanal++;
+        }
+
+    }
+
+    public void bajarCanal() {
+        if (numerocanal == 2) {
+            numerocanal = 120;
+        } else {
             numerocanal--;
+        }
     }
+    byte voltemp;
 
     public void silenciar() {
+
+        if (mute == false) {
+            mute = true;
+            voltemp = volumen;
+            volumen = 0;
+        } else {
+            mute = false;
+            volumen = voltemp;
+            voltemp = 0;
+        }
     }
 
-    public void cambiarCanal(int siguientecanal)
-    {
-        
+    public void cambiarCanal(int siguientecanal) {
+
     }
 
     public Televisor(double alto, double ancho, String marca, String entradaelectrica) {
@@ -92,17 +109,11 @@ public class Televisor extends Electrodomestico {
 
     @Override
     public String toString() {
-        return "------------------\n"+
-                "Estado: "+encendido+"\n"+
-                "Vol: "+ ""+volumen+
-                "\n"+"Can: "+numerocanal+
-                "\n------------------"
-                ;
+        return "------------------\n"
+                + "Estado: " + encendido + "\n"
+                + "Vol: " + "" + volumen
+                + "\n" + "Can: " + numerocanal
+                + "\n------------------";
     }
-    
-    
-    
-    
-    
-    
+
 }
