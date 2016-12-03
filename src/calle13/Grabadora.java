@@ -99,6 +99,7 @@ public class Grabadora extends Electrodomestico
             frecuencia++;
         }
 
+        
     }
 
     public void bajarFrecuencia() {
