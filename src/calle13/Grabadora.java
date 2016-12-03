@@ -12,9 +12,7 @@ package calle13;
 public class Grabadora extends Electrodomestico
 {
     
-    
-    
-    boolean encendido;
+        boolean encendido;
     int volumen;
     int voltemp;
     boolean mute;
@@ -41,7 +39,7 @@ public class Grabadora extends Electrodomestico
     }
 
     
-  public void subirVol() {
+    public void subirVol() {
         if (mute == false) {
             if (volumen == 100) {
                 volumen = 100;
@@ -81,6 +79,42 @@ public class Grabadora extends Electrodomestico
 
     }    
        
+     public void silenciar() {
+
+        if (mute == false) {
+            mute = true;
+            voltemp = volumen;
+            volumen = 0;
+        } else {
+            mute = false;
+            volumen = voltemp;
+            voltemp = 0;
+        }
+    }
     
-    
+    public void subirFrecuencia() {
+        if (frecuencia == 170) {
+            frecuencia = 88;
+        } else {
+            frecuencia++;
+        }
+
+    }
+
+    public void bajarFrecuencia() {
+        if (frecuencia == 88) {
+            frecuencia = 170;
+        } else {
+            frecuencia--;
+        }
+    } 
+     
+     
+     
+     
+     
+     
+     
+     
+     
 }
