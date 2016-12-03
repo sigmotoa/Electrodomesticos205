@@ -41,6 +41,44 @@ public class Grabadora extends Electrodomestico
     }
 
     
+  public void subirVol() {
+        if (mute == false) {
+            if (volumen == 100) {
+                volumen = 100;
+            } else {
+                volumen++;
+            }
+        }
+        else{
+            mute=false;
+            if(voltemp==100)
+            {
+                volumen=100;
+            }
+            else{
+                volumen=(byte)voltemp++;
+            }
+        }
+    }
+
+    public void bajarVolumen() {
+        if(mute==false)
+        {
+            if(volumen==0)
+               volumen=0;
+            else{
+                volumen--;}
+        }
+        else{
+            mute=false;
       
+            if (voltemp == 0) {
+                volumen = 0;
+            } else {
+            volumen=voltemp--;
+            }
+        }
+
+    }    
        
 }
