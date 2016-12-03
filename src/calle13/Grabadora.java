@@ -108,6 +108,15 @@ public class Grabadora extends Electrodomestico
         } else {
             frecuencia--;
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
     } 
      
      
