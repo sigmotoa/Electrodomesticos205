@@ -109,7 +109,24 @@ public class Televisor extends Electrodomestico {
         }
     }
 
-    public void cambiarCanal(int siguientecanal) {
+    public void cambiarCanal(int siguientecanal) 
+    {
+        if (siguientecanal<2) {
+            numerocanal=numerocanal;
+        }
+        
+        else   {
+            
+        if (siguientecanal>120) {
+            numerocanal=numerocanal;
+        }
+        
+        else{
+        numerocanal= (byte) siguientecanal;
+        }
+        
+        }
+        
 
     }
 
