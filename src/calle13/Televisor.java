@@ -146,4 +146,20 @@ public class Televisor extends Electrodomestico {
                 + "\n------------------";
     }
 
+    public void mostrarMenu()
+    {
+        
+        if(encendido==true){
+        System.out.println("-------------------"
+                         +"\n 2- Para Subir Volumen "
+                         + "\n 3- Para Bajar Volumen"
+                         + "\n 4- Para Subir Canal"
+                         + "\n 5- Para Bajar Canal"
+                         + "\n 6- Para Mute"
+                         + "\n 7- Para Ingresar Canal"
+                         + "\n 1- Para Apagar");
+        
+        }
+    }
+    
 }
